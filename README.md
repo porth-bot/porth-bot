@@ -42,6 +42,14 @@ The fun parts:
 
 ---
 
+## From-scratch ML foundations
+
+[**porth-bot/mcmc-from-scratch**](https://github.com/porth-bot/mcmc-from-scratch) — Metropolis–Hastings, Gibbs, and Hamiltonian Monte Carlo in pure NumPy. The rule for the whole repo: no claim without a ground truth or a cross-check. Hand-derived gradients are tested against finite differences, sampler moments against closed-form posteriors, the ESS estimator against an AR(1) closed form — and there's a Neal's-funnel experiment where R-hat says "converged" while the sampler is measurably biased, plus the reparameterization that actually fixes it. Full derivations live in the repo (`theory/derivations.md`), CI-tested.
+
+First in a series of from-scratch builds under the same rule. Next up: transformer grokking, Gaussian processes, physics-informed neural nets.
+
+---
+
 ## Also working on
 
 - [**pinn-learning-journey**](https://github.com/porth-bot/pinn-learning-journey) — daily log of learning Physics-Informed Neural Networks from scratch. Theory, code, experiments. The goal is solving PDEs with neural networks well enough to use them on actual problems, not toy ones.
