@@ -46,7 +46,9 @@ The fun parts:
 
 [**porth-bot/mcmc-from-scratch**](https://github.com/porth-bot/mcmc-from-scratch) — Metropolis–Hastings, Gibbs, and Hamiltonian Monte Carlo in pure NumPy. The rule for the whole repo: no claim without a ground truth or a cross-check. Hand-derived gradients are tested against finite differences, sampler moments against closed-form posteriors, the ESS estimator against an AR(1) closed form — and there's a Neal's-funnel experiment where R-hat says "converged" while the sampler is measurably biased, plus the reparameterization that actually fixes it. Full derivations live in the repo (`theory/derivations.md`), CI-tested.
 
-First in a series of from-scratch builds under the same rule. Next up: transformer grokking, Gaussian processes, physics-informed neural nets.
+[**porth-bot/gp-from-scratch**](https://github.com/porth-bot/gp-from-scratch) — Gaussian process regression in pure NumPy: kernels with hand-derived, finite-difference-checked gradients, marginal-likelihood optimization, a calibration study, and a Mauna Loa CO₂ forecast — plus the neural-tangent-kernel correspondence, where a from-scratch wide ReLU network is measured converging to its analytic GP limit as width grows. Same rule as the rest of the series: every posterior cross-checked against scikit-learn, every gradient against central differences. Includes an honestly-reported negative result — ML-II raises the CO₂ evidence but extrapolates *worse* than the hand-set prior, and the writeup explains why.
+
+First in a series of from-scratch builds under the same rule; transformer grokking and Gaussian processes have since shipped, with physics-informed neural nets and score-based diffusion next.
 
 ---
 
