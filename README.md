@@ -48,7 +48,9 @@ The fun parts:
 
 [**porth-bot/gp-from-scratch**](https://github.com/porth-bot/gp-from-scratch) — Gaussian process regression in pure NumPy: kernels with hand-derived, finite-difference-checked gradients, marginal-likelihood optimization, a calibration study, and a Mauna Loa CO₂ forecast — plus the neural-tangent-kernel correspondence, where a from-scratch wide ReLU network is measured converging to its analytic GP limit as width grows. Same rule as the rest of the series: every posterior cross-checked against scikit-learn, every gradient against central differences. Includes an honestly-reported negative result — ML-II raises the CO₂ evidence but extrapolates *worse* than the hand-set prior, and the writeup explains why.
 
-First in a series of from-scratch builds under the same rule; transformer grokking and Gaussian processes have since shipped, with physics-informed neural nets and score-based diffusion next.
+[**porth-bot/pinn-from-scratch**](https://github.com/porth-bot/pinn-from-scratch) — physics-informed neural networks built from the derivatives up, in PyTorch. The PDE residual comes from exact autograd derivatives of the network (`u_t`, `u_x`, `u_xx` written out by hand), and every problem is measured against a ground truth that is never a grid solver: the heat equation against its exact Fourier series, Burgers' against the Cole-Hopf transform evaluated by Gauss-Hermite quadrature. The centerpiece is a failure mode, not a win — spectral bias measured across initial-condition frequencies k = 1…32, where the network fits k = 16 slowly and k = 32 not at all, explained by the NTK eigenspectrum that `gp-from-scratch` derives. The README leads with the honest part: on these problems classical solvers win, decisively.
+
+First in a series of from-scratch builds under the same rule; transformer grokking, Gaussian processes, and physics-informed neural nets have since shipped, with score-based diffusion next.
 
 ---
 
