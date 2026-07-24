@@ -59,9 +59,3 @@ Four repos, one rule: the core written out by hand, every non-obvious claim chec
 ## Also working on
 
 - [**pinn-learning-journey**](https://github.com/porth-bot/pinn-learning-journey) — daily log of learning Physics-Informed Neural Networks from scratch. Theory, code, experiments. The goal is solving PDEs with neural networks well enough to use them on actual problems, not toy ones.
-
----
-
-## Reach me
-
-- Email: ai.automate101 at gmail dot com
