@@ -1,0 +1,42 @@
+name: update profile art
+
+on:
+  schedule:
+    # daily, a little after midnight US/Central
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: install deps
+        run: pip install -r scripts/requirements.txt
+
+      - name: refresh contribution heatmap
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/fetch_contributions.py --login porth-bot
+          python scripts/render_heatmap.py
+
+      - name: commit if changed
+        run: |
+          git config user.name "porth-bot"
+          git config user.email "159861195+porth-bot@users.noreply.github.com"
+          git add assets/contrib-heatmap.svg scripts/contrib.json
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "chore: refresh contribution heatmap"
+            git push
+          fi
