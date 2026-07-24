@@ -5,7 +5,7 @@
 
 <h3><code>parth@github ~ $ ./contributions.sh</code></h3>
 
-<img src="assets/contrib-heatmap.svg" width="860" alt="Parth's GitHub contribution graph, refreshed daily" />
+<a href="https://github.com/porth-bot/porth-bot/actions/workflows/update-profile-art.yml"><img src="assets/contrib-heatmap.svg" width="860" alt="Parth's GitHub contribution graph, refreshed daily" /></a>
 
 <br>
 <br>
