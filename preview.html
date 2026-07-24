@@ -1,0 +1,40 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>profile art preview</title>
+<style>
+  body { background:#010409; color:#c9d1d9; font:14px ui-monospace, monospace;
+         margin:0; padding:28px; display:flex; flex-direction:column;
+         align-items:center; gap:22px }
+  .row { display:flex; gap:16px; align-items:flex-start }
+  h3 { font-weight:400; color:#7d8590; margin:0 }
+  .bar { display:flex; gap:10px }
+  button { background:#21262d; color:#c9d1d9; border:1px solid #30363d;
+           border-radius:6px; padding:6px 12px; font:inherit; cursor:pointer }
+</style>
+<div class="bar">
+  <button onclick="location.reload()">replay</button>
+  <button onclick="finish()">jump to end</button>
+</div>
+<h3>parth@github ~ $ ./contributions.sh</h3>
+<div id="heat"></div>
+<h3>parth@github ~ $ whoami</h3>
+<div class="row">
+  <div id="portrait"></div>
+  <div id="card"></div>
+</div>
+<script>
+  // inlined rather than <img> so the harness can fast-forward the animations
+  // and screenshot the settled state
+  const load = (id, src) =>
+    fetch(src).then(r => r.text()).then(t => { document.getElementById(id).innerHTML = t });
+
+  Promise.all([
+    load('heat', 'assets/contrib-heatmap.svg'),
+    load('portrait', 'assets/portrait.svg'),
+    load('card', 'assets/info-card.svg'),
+  ]);
+
+  function finish() {
+    document.getAnimations().forEach(a => { a.currentTime = 9000; });
+  }
+</script>
