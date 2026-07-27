@@ -1,15 +1,15 @@
 {
  "login": "porth-bot",
- "total": 305,
+ "total": 313,
  "start": "2025-07-27",
- "end": "2026-07-26",
+ "end": "2026-07-27",
  "max": 46,
  "busiest": {
   "date": "2026-07-03",
   "count": 46
  },
- "current_streak": 23,
- "longest_streak": 23,
+ "current_streak": 24,
+ "longest_streak": 24,
  "weeks": [
   [
    {
@@ -1574,9 +1574,12 @@
   [
    {
     "date": "2026-07-26",
+    "count": 8
+   },
+   {
+    "date": "2026-07-27",
     "count": 0
    },
-   null,
    null,
    null,
    null,
