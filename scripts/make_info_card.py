@@ -37,8 +37,8 @@ CARD = [
     (
         "building",
         [
-            "ML from scratch: mcmc, grokking, gp, pinn",
-            "diffusion is next",
+            "ML from scratch: mcmc, gp, grokking, pinn,",
+            "diffusion. 1,337 tests, all vs ground truth",
         ],
     ),
 ]
