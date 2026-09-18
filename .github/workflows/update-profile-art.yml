@@ -31,8 +31,11 @@ jobs:
 
       - name: commit if changed
         run: |
-          git config user.name "porth-bot"
-          git config user.email "159861195+porth-bot@users.noreply.github.com"
+          # commit as the Actions bot, not as porth-bot: a refresh is not a
+          # contribution, and committing as the account would put a square on
+          # the graph every day whether or not any real work happened
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/contrib-heatmap.svg scripts/contrib.json
           if git diff --cached --quiet; then
             echo "no changes"
