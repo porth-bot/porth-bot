@@ -1,46 +1,16 @@
 {
  "login": "porth-bot",
- "total": 596,
- "start": "2025-09-14",
- "end": "2026-09-19",
+ "total": 598,
+ "start": "2025-09-21",
+ "end": "2026-09-20",
  "max": 46,
  "busiest": {
   "date": "2026-07-03",
   "count": 46
  },
- "current_streak": 78,
- "longest_streak": 78,
+ "current_streak": 79,
+ "longest_streak": 79,
  "weeks": [
-  [
-   {
-    "date": "2025-09-14",
-    "count": 0
-   },
-   {
-    "date": "2025-09-15",
-    "count": 0
-   },
-   {
-    "date": "2025-09-16",
-    "count": 0
-   },
-   {
-    "date": "2025-09-17",
-    "count": 0
-   },
-   {
-    "date": "2025-09-18",
-    "count": 0
-   },
-   {
-    "date": "2025-09-19",
-    "count": 0
-   },
-   {
-    "date": "2025-09-20",
-    "count": 0
-   }
-  ],
   [
    {
     "date": "2025-09-21",
@@ -1598,8 +1568,20 @@
    },
    {
     "date": "2026-09-19",
-    "count": 0
+    "count": 2
    }
+  ],
+  [
+   {
+    "date": "2026-09-20",
+    "count": 0
+   },
+   null,
+   null,
+   null,
+   null,
+   null,
+   null
   ]
  ]
 }
