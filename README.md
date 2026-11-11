@@ -50,9 +50,9 @@ clone, which is checked by cloning them rather than by believing it.
 
 | Repo | The result I would point at first | tests |
 |---|---|---|
-| [**mcmc-from-scratch**](https://github.com/porth-bot/mcmc-from-scratch) `v1.2` | On Neal's funnel, split R-hat reports "converged" while the sampler is measurably biased. The non-centering that fixes it is in the same repo. | 424 |
+| [**mcmc-from-scratch**](https://github.com/porth-bot/mcmc-from-scratch) `v1.3` | On Neal's funnel, split R-hat reports "converged" while the sampler is measurably biased. The non-centering that fixes it is in the same repo. | 424 |
 | [**grokking-transformer**](https://github.com/porth-bot/grokking-transformer) `v1.2` | The generalizing circuit is already forming underneath the memorization: over five seeds, 97.5% [94.9–98.4] of logit energy sits on the a+b diagonal after grokking against 19% [12–24] at memorization. | 300 |
-| [**gp-from-scratch**](https://github.com/porth-bot/gp-from-scratch) `v1.1` | Random features starve the error bar in a data gap: exact posterior sd 0.97, median random-feature draw 0.505, while inducing points hold it at matched cost. Also: `np.linalg.solve(L, B)` is not a triangular solve, and fixing that took an n=16,000 fit from 57.9 s to 12.3 s. | 505 |
+| [**gp-from-scratch**](https://github.com/porth-bot/gp-from-scratch) `v1.2` | Random features starve the error bar in a data gap: exact posterior sd 0.97, median random-feature draw 0.505, while inducing points hold it at matched cost. Also: `np.linalg.solve(L, B)` is not a triangular solve, and fixing that took an n=16,000 fit from 57.9 s to 12.3 s. | 505 |
 | [**pinn-from-scratch**](https://github.com/porth-bot/pinn-from-scratch) `v1.1` | The high-dimensional crossover where a PINN should beat a mesh is real and computable, and the network's accuracy dies 6 to 15 dimensions before it arrives. | 439 |
 | [**diffusion-from-scratch**](https://github.com/porth-bot/diffusion-from-scratch) `v1.0` | Annealed Langevin with a learned score gets measurably *worse* with 10× the compute, because an equilibrium sampler converges harder to the biased law it was handed. | 361 |
 
